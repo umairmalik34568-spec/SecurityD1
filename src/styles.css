@@ -1,0 +1,154 @@
+:root {
+  --ink: #0e2a43;
+  --ink-deep: #0a2036;
+  --panel: #153450;
+  --panel-line: #25506f;
+  --paper: #f2ebda;
+  --cyan: #7fd8de;
+  --green: #4f8f6b;
+  --amber: #c98a2c;
+  --red: #b5473c;
+  --text-light: #eaf3f6;
+  --text-muted: #9fbac9;
+  --text-paper: #2b2415;
+  --text-paper-muted: #6b5f45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--ink);
+  color: var(--text-light);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(127, 216, 222, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127, 216, 222, 0.07) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-2 {
+  gap: 8px;
+}
+.gap-3 {
+  gap: 12px;
+}
+.gap-4 {
+  gap: 16px;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--panel-line);
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background: var(--cyan);
+  color: var(--ink-deep);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+.btn-primary:disabled {
+  background: var(--panel-line);
+  color: var(--text-muted);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--panel-line);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.input {
+  background: var(--panel);
+  border: 1px solid var(--panel-line);
+  color: var(--text-light);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+}
+
+.label {
+  color: var(--text-muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.stamp {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 3px 11px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.12);
+  border: 1.5px dashed currentColor;
+}
+
+.paper-row {
+  background: var(--paper);
+  color: var(--text-paper);
+  border-radius: 6px;
+  padding: 16px;
+}
